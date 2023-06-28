@@ -1,31 +1,34 @@
-// ----------------------------------------------------------------------------
+r// ----------------------------------------------------------------------------
 // Optional Variables
 // ----------------------------------------------------------------------------
 variable "region" {
   description = "AWS region code for creating resources."
   type        = string
+  default     = "us-east-1"
 }
 
 variable "profile" {
   description = "Profile stored in aws config or credentials file"
   type        = string
+  default     = "hendrixz"
 }
 
 variable "cluster_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
+  default     = "1.24"
 }
 
 variable "vault_user" {
   description = "The AWS IAM Username whose credentials will be used to authenticate the Vault pods against AWS"
   type        = string
-  default     = ""
+  default     = "hendrixz"
 }
 
 variable "cluster_name" {
   description = "Name of the Kubernetes cluster to create"
   type        = string
-  default     = ""
+  default     = "team4project3"
 }
 
 variable "force_destroy" {
@@ -48,11 +51,13 @@ variable "jx_git_url" {
 variable "jx_bot_username" {
   description = "Bot username used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "hendrixzack"
 }
 
 variable "jx_bot_token" {
   description = "Bot token used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "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"
 }
 
 variable "nginx_chart_version" {
