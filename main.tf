@@ -1,8 +1,7 @@
 provider "aws" {
-  region  = "us-east-1"
-  profile = "hendrixz"
+  region  = var.region
+  profile = var.profile
 }
-
 module "eks-jx" {
   source               = "github.com/jenkins-x/terraform-aws-eks-jx?ref=v1.21.2"
   cluster_version      = var.cluster_version
